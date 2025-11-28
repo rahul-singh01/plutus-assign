@@ -1,17 +1,26 @@
 import type { Metadata } from "next";
-import { Raleway, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 
-const raleway = Raleway({
-  variable: "--font-raleway",
-  subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
-});
-
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grotesk",
-  subsets: ["latin"],
-  weight: ["300", "400", "500", "600", "700"],
+const neueMachina = localFont({
+  src: [
+    {
+      path: "./fonts/NeueMachina-Light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/NeueMachina-Regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "./fonts/NeueMachina-Ultrabold.otf",
+      weight: "800",
+      style: "normal",
+    },
+  ],
+  variable: "--font-neue-machina",
 });
 
 export const metadata: Metadata = {
@@ -27,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${raleway.variable} ${spaceGrotesk.variable} antialiased`}
+        className={`${neueMachina.variable} antialiased`}
       >
         {children}
       </body>
