@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { Search, TrendingUp, TrendingDown, RefreshCw } from "lucide-react";
 import { motion } from "framer-motion";
+import { toast } from "sonner";
 
 interface Coin {
     id: string;
@@ -38,8 +39,10 @@ export default function CryptoDashboard({ initialCoins }: CryptoDashboardProps) 
             if (!response.ok) throw new Error("Failed to fetch");
             const data = await response.json();
             setCoins(data);
+            toast.success("Crypto data updated successfully");
         } catch (error) {
             console.error("Failed to refresh data:", error);
+            toast.error("Failed to update crypto data");
         } finally {
             setIsRefreshing(false);
         }

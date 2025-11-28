@@ -49,7 +49,7 @@ export default function WhyMoonEX() {
 
                 <div className="bg-[#0b1d2e]/50 backdrop-blur-md rounded-[20px] p-6 md:p-6 border border-white/5">
                     <div className="overflow-x-auto">
-                        <table className="w-full border-collapse">
+                        <table className="w-full border-collapse min-w-[700px]">
                             <thead>
                                 <tr className="border-b border-white/10">
                                     <th className="py-4 text-left pl-4 md:pl-8">

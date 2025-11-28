@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
     return (
-        <section className="relative w-full min-h-screen flex items-center pt-20">
+        <section className="relative w-full xs:mt-28 md:min-h-screen flex items-center pt-32">
 
             <div className="absolute inset-0 z-0">
                 <Image
@@ -41,9 +41,9 @@ export default function Hero() {
                     className="flex flex-col gap-6 md:gap-8 max-w-4xl"
                 >
                     <h1 className="text-4xl md:text-7xl font-extrabold leading-[1.1] tracking-tight">
-                        <span className="whitespace-nowrap">Trusted Multi-Chain</span>
+                        <span className="whitespace-normal md:whitespace-nowrap">Trusted Multi-Chain</span>
                         <br />
-                        <span className="whitespace-nowrap">
+                        <span className="whitespace-normal md:whitespace-nowrap">
                             <span className="text-primary">DEX</span> Platform
                         </span>
                     </h1>

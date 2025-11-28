@@ -34,7 +34,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 w-full z-50 px-4 md:px-12 lg:px-20 flex justify-between items-center transition-all duration-300 ${isScrolled
+            className={`fixed top-0 left-0 w-full z-50 px-4 md:px-8 lg:px-12 xl:px-20 flex justify-between items-center transition-all duration-300 ${isScrolled
                 ? "py-4 bg-background/30 backdrop-blur-md border-b border-white/5"
                 : "py-6 bg-transparent"
                 }`}
@@ -50,7 +50,7 @@ export default function Navbar() {
                 />
             </div>
 
-            <div className="hidden md:flex items-center gap-8 lg:gap-12">
+            <div className="hidden lg:flex items-center gap-6 xl:gap-10">
                 {navLinks.map((link) => (
                     <Link
                         key={link.name}
@@ -63,7 +63,7 @@ export default function Navbar() {
                 ))}
             </div>
 
-            <div className="hidden md:block">
+            <div className="hidden lg:block">
                 <button className="bg-gradient-to-r from-primary to-secondary text-black font-extrabold px-6 py-3 rounded-full hover:opacity-90 transition-opacity text-sm">
                     Connect Wallet
                 </button>
@@ -71,7 +71,7 @@ export default function Navbar() {
 
             {/* Mobile Menu Button */}
             <button
-                className="md:hidden text-white"
+                className="lg:hidden text-white"
                 onClick={() => setIsOpen(!isOpen)}
             >
                 {isOpen ? <X size={28} /> : <Menu size={28} />}
@@ -84,7 +84,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-20 left-0 w-full bg-background/95 backdrop-blur-md p-6 flex flex-col items-center gap-6 md:hidden border-b border-white/10"
+                        className="absolute top-full left-0 w-full bg-background/95 backdrop-blur-md p-6 flex flex-col items-center gap-6 lg:hidden border-b border-white/10"
                     >
                         {navLinks.map((link) => (
                             <Link
