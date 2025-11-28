@@ -20,7 +20,7 @@ export default function Navbar() {
 
     return (
         <nav className="fixed top-0 left-0 w-full z-50 py-6 px-4 md:px-12 lg:px-20 flex justify-between items-center bg-transparent">
-         
+
             <div className="flex items-center gap-2">
                 <Image
                     src="/assets/logo.png"
@@ -65,7 +65,7 @@ export default function Navbar() {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="absolute top-20 left-0 w-full bg-[#051422]/95 backdrop-blur-md p-6 flex flex-col items-center gap-6 md:hidden border-b border-white/10"
+                        className="absolute top-20 left-0 w-full bg-background/95 backdrop-blur-md p-6 flex flex-col items-center gap-6 md:hidden border-b border-white/10"
                     >
                         {navLinks.map((link) => (
                             <Link
