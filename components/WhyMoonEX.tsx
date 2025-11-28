@@ -32,10 +32,10 @@ export default function WhyMoonEX() {
     ];
 
     return (
-        <section className="relative w-full py-20 overflow-visible bg-[#051422] ">
-            {/* Glowing Orbs */}
+        <section className="relative w-full py-20 overflow-visible bg-background ">
+            {/* Glare */}
             <div className="absolute inset-0 overflow-visible pointer-events-none">
-                {/* Center Bottom Glow - Yellow */}
+                {/* Center Bottom Glow */}
                 <div className="absolute left-1/3 -translate-x-1/3 -bottom-1 w-[450px] h-[450px] bg-yellow-300/30 rounded-full blur-[180px] z-10" />
 
                 {/* Top Right Glow */}
