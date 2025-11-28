@@ -3,17 +3,16 @@ import Link from "next/link";
 
 const Footer = () => {
     return (
-        <footer className="bg-background relative overflow-hidden z-50">
+        <footer className="bg-background p-4 md:p-6 lg:p-8 relative overflow-hidden z-50">
             <div className="container mx-auto max-w-7xl flex flex-col md:flex-row justify-between items-center gap-10 md:gap-0">
 
-                <div className="relative w-50 h-50 overflow-hidden flex items-center justify-center">
+                <div className="relative w-[200px] h-[100px] overflow-hidden flex items-center justify-center">
                     <Image
                         src="/assets/footer_bg_rect.svg"
                         alt="Moonex Text"
                         width={100}
                         height={100}
-                        className="max-w-none absolute"
-                        style={{ height: '100px', width: 'auto' }}
+                        className="max-w-none absolute h-[100px] w-auto"
                     />
                 </div>
 
